@@ -80,23 +80,21 @@ class PhotonFormPlugin extends Plugin
       $assets = 		$this->grav['assets'];
 
       // only load the vars if this datatype page
-      if ($page->template() == 'form')
-      {
+      // if ($page->template() == 'form')
+      // {
 
         // styles
-        if ($this->config->get('plugins.photon-form.built_in_css')) {
+        // if ($this->config->get('plugins.photon-form.built_in_css')) {
           $css = 'plugin://photon-form/assets/form.css';
           $assets->addCss($css, 100, false, 'photon-plugins' );
-        }
+        // }
 
         // scripts
-        if ($this->config->get('plugins.photon-form.built_in_js')) {
+        // if ($this->config->get('plugins.photon-form.built_in_js')) {
           $js = 'plugin://photon-form/assets/form.js';
           $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
-        }
-
-
-      }
+        // }
+      // }
     }
 
 }
